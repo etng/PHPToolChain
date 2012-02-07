@@ -27,5 +27,6 @@ copy php_memcache.dll PHP\ext\
 copy php_xdebug.dll PHP\ext\
 copy PHP\php.ini-development PHP\php.ini
 copy my.ini MySQL\my.ini
+copy nginx.conf nginx\conf\nginx.conf
 echo done
 @echo on
