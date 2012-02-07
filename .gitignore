@@ -1,0 +1,11 @@
+logs
+temp
+scgi_temp
+uwsgi_temp
+nginx
+PHP
+mysql
+data
+www
+.svn
+bin/errlog.log
