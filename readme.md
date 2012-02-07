@@ -4,7 +4,7 @@
 
 ## 使用方法:
 
-下载最新代码包并解压到 c:/wnmp 目录，然后运行 install.bat，日常工作运行 phptc.bat 即可开始 PHP 开发工作
+下载最新代码包并解压到 C:/PHPToolChain 目录，然后运行 install.bat，日常工作运行 phptc.bat 即可开始 PHP 开发工作
 
 ## 打包内容:
 
