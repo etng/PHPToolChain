@@ -1,5 +1,5 @@
 @echo off
-
+set path=%~dp0bin;%path%
 echo downloading...
 wget http://nginx.org/download/nginx-1.1.12.zip
 wget http://dev.mysql.com/get/Downloads/MySQL-5.5/mysql-5.5.20-win32.zip/from/http://mysql.stu.edu.tw/
@@ -14,15 +14,19 @@ wget http://the.earth.li/~sgtatham/putty/latest/x86/putty.zip
 echo extracting...
 7z x HeidiSQL_6.0_Portable.zip -oHeidiSQL
 7z x PortableGit-1.7.9-preview20120201.7z -ogit
-7z x svn-win32-1.6.17.zip -osvn
+7z x svn-win32-1.6.17.zip
 7z x putty.zip -obin
 7z x SysinternalsSuite.zip -oSysinternalsSuite
-7z x nginx-1.1.12.zip -onginx
+7z x nginx-1.1.12.zip
 7z x php-5.3.10-nts-Win32-VC9-x86.zip -oPHP
 7z x phpMyAdmin-3.4.7.1-english.7z -owww\phpMyAdmin
-7z x mysql-5.5.20-win32.zip -oMySQL
+7z x mysql-5.5.20-win32.zip
 
-echo configureing
+rename mysql-5.5.20-win32 MySQL
+rename svn-win32-1.6.17 svn
+rename nginx-1.1.12 nginx
+
+echo configuring
 copy/Y php_memcache.dll PHP\ext\
 copy/Y php_xdebug.dll PHP\ext\
 copy/Y php.ini PHP\php.ini
