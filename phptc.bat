@@ -1,6 +1,7 @@
 @echo off
+title PHPToolChain Loader
 rem Windows Nginx MySQL Memcached PHP
-SET EXTRA_PATH=%~dp0bin;%~dp0php;%~dp0mysql\bin;%~dp0SysinternalsSuite;%~dp0git;%~dp0svn;
+SET EXTRA_PATH=%~dp0bin;%~dp0php;%~dp0mysql\bin;%~dp0SysinternalsSuite;%~dp0git;%~dp0svn\bin;
 set path=%EXTRA_PATH%%path%
 echo 请将以下内容加入 PATH环境变量
 echo %EXTRA_PATH%
@@ -38,4 +39,3 @@ RunHiddenConsole.exe nginx\nginx.exe -c nginx\conf\nginx.conf
 
 echo Nginx+PHP已启动。
 pause
-exit
