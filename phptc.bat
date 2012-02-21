@@ -32,10 +32,11 @@ RunHiddenConsole.exe php-cgi.exe  -b 127.0.0.1:7003
 RunHiddenConsole.exe php-cgi.exe  -b 127.0.0.1:7004
 RunHiddenConsole.exe php-cgi.exe  -b 127.0.0.1:7005
 echo PHP已启动。
+pushd %~dp0
 nginx\nginx.exe -v
-nginx\nginx.exe -t -c nginx\conf\nginx.conf
+nginx\nginx.exe -t -c %~dp0nginx\conf\nginx.conf
 echo 正在启动Nginx进程......
-RunHiddenConsole.exe nginx\nginx.exe -c nginx\conf\nginx.conf
-
+RunHiddenConsole.exe %~dp0nginx\nginx.exe -c %~dp0nginx\conf\nginx.conf
+popd
 echo Nginx+PHP已启动。
 pause
