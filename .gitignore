@@ -10,3 +10,16 @@ data
 www
 .svn
 bin/errlog.log
+*.local.nginx.conf
+HeidiSQL/
+bin/PAGEANT.EXE
+bin/PLINK.EXE
+bin/PSCP.EXE
+bin/PSFTP.EXE
+bin/PUTTY.CHM
+bin/PUTTY.CNT
+bin/PUTTY.EXE
+bin/PUTTY.HLP
+bin/PUTTYGEN.EXE
+git/
+svn/
