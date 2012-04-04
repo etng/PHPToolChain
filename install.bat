@@ -4,10 +4,10 @@ set path=%~dp0bin;%path%
 echo downloading...
 rem SET SF_MIRROR=nchc
 SET SF_MIRROR=jaist
-SET NGINX_VERSION=1.1.12
+SET NGINX_VERSION=1.1.18
 SET MYSQL_VERSION=5.5.22
 SET MYSQL_MIRROR=http://ftp.jaist.ac.jp/pub/mysql/
-SET PHPMYADMIN_VERSION=3.4.7.1
+SET PHPMYADMIN_VERSION=3.4.10.2
 SET PHP_VERSION=5.3.10
 SET GIT_VERSION=1.7.9
 SET GIT_RELEASE=preview20120201
@@ -50,12 +50,15 @@ echo extracting...
 7z x downloads/SysinternalsSuite.zip -oSysinternalsSuite
 7z x downloads/nginx-%NGINX_VERSION%.zip
 7z x downloads/php-%PHP_VERSION%-nts-Win32-VC9-x86.zip -oPHP
-7z x downloads/phpMyAdmin-%PHPMYADMIN_VERSION%-english.7z -owww\phpMyAdmin
+7z x downloads/phpMyAdmin-%PHPMYADMIN_VERSION%-english.7z -owww
 7z x downloads/mysql-%MYSQL_VERSION%-win32.zip
 
 rename mysql-%MYSQL_VERSION%-win32 MySQL
 rename svn-win32-%SVN_VERSION% svn
 rename nginx-%NGINX_VERSION% nginx
+pushd www
+rename phpMyAdmin-%PHPMYADMIN_VERSION%-english pma
+popd
 
 echo configuring
 copy/Y php_memcache.dll PHP\ext\
