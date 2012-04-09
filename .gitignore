@@ -1,5 +1,6 @@
 logs
 downloads
+SysinternalsSuite
 temp
 scgi_temp
 uwsgi_temp
@@ -23,3 +24,4 @@ bin/PUTTY.HLP
 bin/PUTTYGEN.EXE
 git/
 svn/
+nginx_log.lst
